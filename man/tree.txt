@@ -39,6 +39,7 @@ myproject_website
 │       │   │       └── scss/
 │       │   │           └── style.scss
 │       │   ├── templates/
+|       |   |   |── includes/
 │       │   │   ├── base.html
 │       │   │   └── index.html
 │       │   ├── __init__.py
