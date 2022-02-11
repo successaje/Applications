@@ -23,4 +23,5 @@ def get_git_changeset_timestamp(absolute_path):
         return datetime.now().strftime('%Y%m%d%H%M%S')
     
     changest_timestamp = timestamp.strftime("%Y%m%d%H%M%S")
+
     return changest_timestamp
