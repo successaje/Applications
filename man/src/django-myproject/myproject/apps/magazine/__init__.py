@@ -1,1 +1,1 @@
-default_app_config = "myproject.apps.maagazine.apps.MagazineAppConfig"
+default_app_config = "myproject.apps.magazine.apps.MagazineAppConfig"

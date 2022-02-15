@@ -13,7 +13,10 @@ psql -h localhost -U postgres
 """
 
 from pathlib import Path
+
 from django.core.exceptions import ImproperlyConfigured
+from django.utils.translation import gettext_lazy as _
+
 from myproject.apps.core.versioning import get_git_changeset_timestamp
 
 import os
@@ -144,7 +147,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -167,3 +170,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MAGAZINE_ARTICLE_THEME_CHOICES = [
+    ('futurism', _("Futurism")),
+    ('nostalgia', _("Nostalgia")),
+    ('sustainability', _("Sustainablity")),
+    ('wonder', _("Wonder")),
+    ('positivity', _("Positivity")),
+    ('solutions', _("Solutions")),
+    ('science', _("Science")),
+]

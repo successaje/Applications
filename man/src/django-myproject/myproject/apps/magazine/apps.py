@@ -2,9 +2,9 @@ from django.apps import AppConfig
 from django.utils.translation import gettext_lazy as _
 
 
-class MagazineConfig(AppConfig):
+class MagazineAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'magazine'
+    name = 'myproject.apps.magazine'
     verbose_name = _("Magazine")
 
     def ready(self):
