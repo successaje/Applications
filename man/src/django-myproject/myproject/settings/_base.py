@@ -94,10 +94,6 @@ TEMPLATES = [
     },
 ]
 
-LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),
-]
-
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
@@ -149,21 +145,26 @@ USE_L10N = True
 
 USE_TZ = False
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-with open (os.path.join(BASE_DIR, 'myproject', 'settings', 'last-update.txt'), 'r') as f:
-    timestamp = f.readline().strip()
-
 #timestamp = get_git_changeset_timestamp(BASE_DIR)
-STATIC_URL = '/static/{timestamp}/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myproject/site_static'),
 ]
 
+with open (os.path.join(BASE_DIR, 'myproject', 'settings', 'last-update.txt'), 'r') as f:
+    timestamp = f.readline().strip()
+
+STATIC_URL = f'/static/{timestamp}/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
