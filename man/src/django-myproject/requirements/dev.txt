@@ -1,5 +1,2 @@
 # requirements/dev.txt
 -r _base.txt
-coverage
-django-debug-toolbar
-selenium
