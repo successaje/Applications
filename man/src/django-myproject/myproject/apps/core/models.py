@@ -5,3 +5,6 @@ class CreationModificationDatabase(models.Model):
 
 class MetaTagsBase(models.Model):
     pass
+
+class UrlBase(models.Model):
+    pass
