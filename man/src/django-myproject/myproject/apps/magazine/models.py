@@ -1,5 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse
+
+
 
 class NewsArticle(models.Model):
     created_at = models.DateTimeField(_("Created at"), auto_now_add = True)
