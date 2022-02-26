@@ -8,4 +8,8 @@ class MetaTagsBase(models.Model):
     pass
 
 class UrlBase(models.Model):
-    pass
+
+    class Meta:
+        abstract = True
+        def get_url(self):
+            if 
