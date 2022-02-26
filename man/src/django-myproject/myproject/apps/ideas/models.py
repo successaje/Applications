@@ -26,4 +26,4 @@ class Idea(CreationModificationDatabase, MetaTagsBase, UrlBase):
             return self.title
 
         def get_url_path(self):
-            return reverse("idea_details", kwargs={"idea_id":str(self.pk)})
+            return reverse("idea_details", kwargs={"idea_id":str(self.pk),})
