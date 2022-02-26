@@ -20,3 +20,10 @@ class Idea(CreationModificationDatabase, MetaTagsBase, UrlBase):
 
     class Meta:
         verbose_name= _("Idea")
+        verbose_name_plural = _("Ideas")
+
+        def __str__(self):
+            return self.title
+
+        def get_url_path(self):
+            return reverse("idea_details", kwargs={"idea_id":str(self.pk)})
