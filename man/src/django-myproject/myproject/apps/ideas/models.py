@@ -8,4 +8,15 @@ from myproject.apps.core.models import(
     UrlBase,
 )
 
-class Idea()
+class Idea(CreationModificationDatabase, MetaTagsBase, UrlBase):
+    title = models.CharField(
+        _("Title"),
+        max_length=200,
+    )
+
+    content = models.TextField(
+        _("Content"),
+    )
+
+    class Meta:
+        verbose_name= _("Idea")
