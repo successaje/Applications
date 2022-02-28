@@ -12,4 +12,11 @@ class UrlBase(models.Model):
     class Meta:
         abstract = True
         def get_url(self):
-            if 
+            if hasattr(self.get_url_path, "dont recurse"):
+                raise NotImplementedError
+            
+            try:
+                path = self.get_url_path()
+            except NotImplementedError:
+                raise
+            return
