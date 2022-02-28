@@ -2,11 +2,11 @@ from django.db import models
 from django.conf import settings
 from urllib.parse import urlparse, urlunparse
 
-class CreationModificationDatabase(models.Model):
-    pass
+# class CreationModificationDatabase(models.Model):
+#     pass
 
-class MetaTagsBase(models.Model):
-    pass
+# class MetaTagsBase(models.Model):
+#     pass
 
 class UrlBase(models.Model):
     """
