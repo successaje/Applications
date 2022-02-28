@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class CreationModificationDatabase(models.Model):
     
     pass
@@ -19,4 +20,6 @@ class UrlBase(models.Model):
                 path = self.get_url_path()
             except NotImplementedError:
                 raise
-            return
+            return settings.WEBSITE_URL + path
+        get_url.dont_recurse = True
+
